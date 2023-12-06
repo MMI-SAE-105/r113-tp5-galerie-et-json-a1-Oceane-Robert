@@ -9,27 +9,14 @@
 <body>
 <h1>JSON</h1>
 <ul x-data="{
-    donnees: [
-        {
-            nom: 'Jean',
-            projet: 'Alpine.js',
-            url: 'https://alpinejs.dev/' 
-        },
-        {
-            nom: 'Maxime',
-            projet: 'Tailwind CSS',
-            url: 'https://tailwindcss.com/'
-        },
-        {
-            nom: 'Adam',
-            projet: 'Laravel',
-            url: 'https://laravel.com/'
-        }
-],
+    async donnees() {
+        const resp = await fetch('image.json');
+        return await resp.json();
+    }
 }">
 <template x-for="obj in donnees">
     <li>
-        <span x-text='obj.nom'>nom</span>
+        <span x-text='obj.nom'>nom</span><p>:</p>
         <a :href='obj.url' x-text='obj.projet'>projet</a>
     </li>
 </template>
