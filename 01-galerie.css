@@ -1,68 +1,83 @@
+/* 01-galerie.css */
+
+/* Overlay styles */
 .overlay {
-    /* Sit on top of the page content */
     position: fixed;
-    /* Full width (cover the whole page) */
     width: 100%;
-    /* Full height (cover the whole page) */
     height: 100%;
-    /* Stay at the top */
-    top : 0;
-    /* Stay at the left */
+    top: 0;
     left: 0;
-    /* Stay at the right */
-    right: 0;
-    /* Stay at the bottom */
-    bottom: 0;
-    /* Black background with opacity */
-    background-color: rgba(0,0,0,0.9);
-    /* Add a pointer on hover */
+    background-color: rgba(0, 0, 0, 0.9);
     cursor: pointer;
-    /* Use a grid for easy centering */
-    display: grid;
-    /* Center vertically and horizontally */
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .overlay::after {
-    /* Add content : "X" */
-    content: "X"; 
-    /* White text color */
+    content: "✕"; 
     color: white; 
-    /* Black background color */
     background-color: black;
-    /* Font family "sans-serif" */
     font-family: sans-serif;
-    /* Centered text */
     text-align: center;
-    /* Line height ( idem height ) */
     line-height: 2rem;
-    /* Display as a block */
     display: block;
-    /* Position absolute */
     position: absolute;
-    /* 1rem from the top */
-    top : 1rem;
-    /* 1rem from the right */
+    top: 1rem;
     right: 1rem;
-    /* 2rem width */
     width: 2rem;
-    /* 2rem height */
     height: 2rem;
-    /* White border of 2px */
     border: 2px solid white;
-    /* Rounded border */
     border-radius: 50%;
 }
-.overlay>figure {
-    /* No margin */
+
+.overlay > figure {
     margin: 0;
-    /* 1rem padding */
     padding: 1rem;
-    /* White border of 2px */
     border: 2px solid white;
 }
-.overlay>figure>img {
-    /* Max width 100% for responsive image */
+
+.overlay > figure > img {
     max-width: 100%;
-    /* Height auto for keeping the ratio */
     height: auto;
+}
+
+/* Other styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img {
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    display: block;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+img:hover {
+    border-color: #007bff;
+}
+
+body[style*="overflow: hidden;"] {
+    overflow: hidden !important;
 }
