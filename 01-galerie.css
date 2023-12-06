@@ -67,6 +67,7 @@ img {
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
     display: block;
+    border-radius: 5px;
 }
 
 .image-container {
