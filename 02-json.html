@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="02-json.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Document</title>
 </head>
@@ -15,7 +16,7 @@
     }
 }">
 <template x-for="obj in donnees">
-    <li>
+    <li class="donnees">
         <span x-text='obj.nom'>nom</span><p>:</p>
         <a :href='obj.url' x-text='obj.projet'>projet</a>
     </li>

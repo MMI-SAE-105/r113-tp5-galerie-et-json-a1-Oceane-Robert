@@ -1,0 +1,44 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.donnees {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    display: flex;
+}
+
+.donnees span {
+    font-weight: bold;
+    color: #333;
+}
+
+.donnees p {
+    margin: 0 5px;
+}
+
+.donnees a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.donnees a:hover {
+    text-decoration: underline;
+}
